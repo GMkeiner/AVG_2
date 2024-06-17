@@ -27,7 +27,7 @@
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
-			<span class="icono-cerrar"><i class="fa-solid fa-xmark"></i></span>
+			{{-- <span class="icono-cerrar"><i class="fa-solid fa-xmark"></i></span> --}}
 			<div class="card-header">
 			</div>
 			<div class="card-body">
@@ -50,8 +50,12 @@
 					<div class="row align-items-center remember">
 						<input type="checkbox">¿Olvide mi contraseña
 					</div>
-					<div class="form-group">
-						<input type="submit" value="Ingresar" class="btn float-right login_btn">
+					<div class="row mb-0">
+						<div class="col-md-6 offset-md-4">
+							<button type="submit" class="button" value="Ingresar"> 
+							   Ingresar
+							</button>
+						</div>
 					</div>
 				</form>
 			</div>

@@ -36,6 +36,56 @@ h2{
     text-align: center;
     font-size: 2.5em;
 }
+.form-control{
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+}
+.form-control:focus{
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+button {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 1%;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #171717, #242424);
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1), 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #292929;
+}
+button::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(to bottom, #292929, #000000);
+  z-index: -1;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+button:active{
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1), 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
 .logo{
     position: relative;
     font-size: 2.3rem;          
@@ -91,10 +141,10 @@ h2{
 .card{
     position: relative;
     display: flex;
-    width: 400px;
-    height: 440px;
+    width: 600px;
+    height: 430px;
     margin-top: 10%;
-    margin-left: auto;
+    margin-left: 250px;
     margin-bottom: auto;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -104,32 +154,9 @@ h2{
     /* transition: transform .5s ease height .2s;
     transform: scale(0); */
 }
-.card .icono-cerrar{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 1.8em;
-    color: black;
-} 
+
 
 label{
     font-weight: bold;
     color: black;
-}
-.btn{
-    font-weight: bold;
-    color: black;
-    background-color: gray;
-}
-.btn:hover{
-    background-color: #fff;
 }

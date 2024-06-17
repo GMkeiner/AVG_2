@@ -26,15 +26,21 @@
     <div class="container">
         <div class="col-md-8">
             <div class="card">
-            <span class="icono-cerrar"><i class="fa-solid fa-xmark"></i></span>
+            {{-- <span class="icono-cerrar"><i class="fa-solid fa-xmark"></i></span> --}}
                 <h2>Registrarme</h2>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row mb-3">
                             <label for="name"  class="col-md-4 col-form-label text-md-end">Nombre de Usuario</label>
+
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <div class="input-group-prepend">
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nombre de usuario">
+                                    </div>
+                                </div>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -48,7 +54,13 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">Correo Electronico</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Correo Electronico">
+                                    </div>
+                                </div>
+                               
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -62,7 +74,13 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end">Contraseña</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <div class="input-group-prepend">
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></i></span>
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Contraseña">
+                                    </div>
+                                </div>
+                              
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -76,13 +94,18 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">Confirmar Contraseña</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-check"></i></span>
+                                    </div>
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmar contraseña" >
+                                </div>
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn    ">
+                                <button type="submit" class="button">
                                    Registrarse
                                 </button>
                             </div>
